@@ -6,7 +6,7 @@ const spread = origin => {
     coronas.push(corona);
     app.stage.addChild(corona);
 }
-spread({ x: app.screen.width / 2 - 32, y: app.screen.height / 2 - 32 }, 1);
+spread({ x: app.screen.width / 2 - 32, y: app.screen.height / 2 - 32 });
 app.ticker.add(() => {
     const rFactor = document.getElementById("rFactor").value;
     coronas.forEach(corona => { corona.ttl -= 1; Array(spreadAmount(rFactor/ttl)).fill().forEach(() => spread(corona)); });
